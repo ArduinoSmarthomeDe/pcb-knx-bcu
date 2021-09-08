@@ -1,0 +1,308 @@
+EESchema Schematic File Version 4
+LIBS:KNX_BCU-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "KNX TP-UART BCU"
+Date "2021"
+Rev "V.1.0"
+Comp "André Husken"
+Comment1 "www.arduino-smarthome.de"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L KNX_BCU-rescue:EIB-TP-UART-Knx-Arduino_KNX_Schield-rescue-Arduino_KNX_Schield-rescue U1
+U 1 1 5EB0F634
+P 5300 4300
+F 0 "U1" V 5346 3420 50  0000 R CNN
+F 1 "EIB-TP-UART" V 5255 3420 50  0000 R CNN
+F 2 "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" H 5300 4400 50  0001 C CIN
+F 3 "http://www.opternus.com/uploads/media/TPUART1_Datenblatt_20130806.pdf" H 5300 4300 50  0001 C CNN
+	1    5300 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_TVS D2
+U 1 1 5EB2A168
+P 3600 4200
+F 0 "D2" V 3554 4279 50  0000 L CNN
+F 1 "P4SMAJ43A" H 3650 4300 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 3600 4200 50  0001 C CNN
+F 3 "~" H 3600 4200 50  0001 C CNN
+	1    3600 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3600 4050 3600 3650
+Wire Wire Line
+	3600 3650 3450 3650
+$Comp
+L Diode:1N5408 D3
+U 1 1 5EB2B76E
+P 3750 3650
+F 0 "D3" H 3750 3434 50  0000 C CNN
+F 1 "S 1M" H 3750 3525 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 3750 3475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88516/1n5400.pdf" H 3750 3650 50  0001 C CNN
+	1    3750 3650
+	-1   0    0    1   
+$EndComp
+Connection ~ 3600 3650
+Wire Wire Line
+	4600 3650 4100 3650
+$Comp
+L Device:R R1
+U 1 1 5EB2E3F9
+P 3900 4050
+F 0 "R1" H 3970 4096 50  0000 L CNN
+F 1 "68/1W" H 3970 4005 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric" V 3830 4050 50  0001 C CNN
+F 3 "~" H 3900 4050 50  0001 C CNN
+	1    3900 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3900 3900 3650
+Connection ~ 3900 3650
+Wire Wire Line
+	4750 4950 4750 5050
+Wire Wire Line
+	4750 5050 3900 5050
+Wire Wire Line
+	3900 5050 3900 4200
+$Comp
+L Device:C C1
+U 1 1 5EB2F741
+P 4100 4450
+F 0 "C1" H 4215 4496 50  0000 L CNN
+F 1 "47nF" H 4215 4405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 4300 50  0001 C CNN
+F 3 "~" H 4100 4450 50  0001 C CNN
+	1    4100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4300 4100 3650
+Connection ~ 4100 3650
+Wire Wire Line
+	4100 3650 3900 3650
+Wire Wire Line
+	4100 4600 4100 5150
+Wire Wire Line
+	4100 5150 4900 5150
+Wire Wire Line
+	4900 5150 4900 4950
+$Comp
+L Device:C C3
+U 1 1 5EB7FA38
+P 4900 3400
+F 0 "C3" H 5015 3446 50  0000 L CNN
+F 1 "47nF" H 5015 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4938 3250 50  0001 C CNN
+F 3 "~" H 4900 3400 50  0001 C CNN
+	1    4900 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3550 4900 3650
+Wire Wire Line
+	4900 3250 4750 3250
+Wire Wire Line
+	4750 3250 4750 3650
+$Comp
+L Device:CP C2
+U 1 1 5EB80DBA
+P 4750 3100
+F 0 "C2" H 4632 3054 50  0000 R CNN
+F 1 "100uF/35V" H 4632 3145 50  0000 R CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 4788 2950 50  0001 C CNN
+F 3 "~" H 4750 3100 50  0001 C CNN
+	1    4750 3100
+	-1   0    0    1   
+$EndComp
+Connection ~ 4750 3250
+$Comp
+L power:VCC #PWR0101
+U 1 1 5EB81FB2
+P 5200 2600
+F 0 "#PWR0101" H 5200 2450 50  0001 C CNN
+F 1 "VCC" H 5217 2773 50  0000 C CNN
+F 2 "" H 5200 2600 50  0001 C CNN
+F 3 "" H 5200 2600 50  0001 C CNN
+	1    5200 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3650 5050 3500
+Wire Wire Line
+	5050 3500 5200 3500
+Connection ~ 5200 3500
+Wire Wire Line
+	5200 3500 5200 3650
+Wire Wire Line
+	5650 3650 5650 3500
+Wire Wire Line
+	5650 3500 5200 3500
+$Comp
+L Device:CP C4
+U 1 1 5EB8396A
+P 5500 2800
+F 0 "C4" H 5618 2846 50  0000 L CNN
+F 1 "T491D 6,8U 35" H 5618 2755 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-20_Kemet-V" H 5538 2650 50  0001 C CNN
+F 3 "~" H 5500 2800 50  0001 C CNN
+	1    5500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2600 5200 2650
+Wire Wire Line
+	5500 2650 5200 2650
+Connection ~ 5200 2650
+Wire Wire Line
+	5200 2650 5200 3500
+Wire Wire Line
+	5500 2950 4750 2950
+Wire Wire Line
+	5500 3650 5500 2950
+Connection ~ 5500 2950
+Wire Wire Line
+	5700 2950 5500 2950
+$Comp
+L power:VCC #PWR0104
+U 1 1 5EC4A4D7
+P 5050 5450
+F 0 "#PWR0104" H 5050 5300 50  0001 C CNN
+F 1 "VCC" H 5067 5623 50  0000 C CNN
+F 2 "" H 5050 5450 50  0001 C CNN
+F 3 "" H 5050 5450 50  0001 C CNN
+	1    5050 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 4950 5050 5050
+Wire Wire Line
+	5050 5050 5200 5050
+Wire Wire Line
+	5200 5050 5200 4950
+Connection ~ 5050 5050
+$Comp
+L Device:Crystal Y1
+U 1 1 5EC50AB4
+P 5650 5600
+F 0 "Y1" V 5604 5731 50  0000 L CNN
+F 1 "4.915MHz" V 5695 5731 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD" H 5650 5600 50  0001 C CNN
+F 3 "~" H 5650 5600 50  0001 C CNN
+	1    5650 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 4950 5650 5450
+Wire Wire Line
+	5500 4950 5500 5750
+Wire Wire Line
+	5500 5750 5650 5750
+NoConn ~ 5800 4950
+NoConn ~ 5800 3650
+NoConn ~ 5350 3650
+Text GLabel 6600 5100 2    50   Input ~ 0
+TXD
+Text GLabel 7700 1250 0    50   Output ~ 0
+KNX+
+Text GLabel 3450 3650 0    50   Input ~ 0
+KNX+
+Text GLabel 3450 5250 0    50   Input ~ 0
+KNX-
+Wire Wire Line
+	5350 4950 5350 5250
+Wire Wire Line
+	5350 5250 4600 5250
+Wire Wire Line
+	4600 4950 4600 5250
+Connection ~ 4600 5250
+Wire Wire Line
+	3600 4350 3600 5250
+Connection ~ 3600 5250
+Wire Wire Line
+	3600 5250 3450 5250
+Wire Wire Line
+	5950 5100 5950 4950
+Wire Wire Line
+	3600 5250 4600 5250
+Wire Wire Line
+	6250 3500 5950 3500
+Wire Wire Line
+	5950 3500 5950 3650
+Wire Wire Line
+	5950 5100 6600 5100
+Text GLabel 5700 2950 2    50   Input ~ 0
+KNX-
+Text GLabel 7700 1750 0    50   Output ~ 0
+KNX-
+$Comp
+L Connector:Conn_01x06_Female J2
+U 1 1 608274F3
+P 9250 1450
+F 0 "J2" H 9278 1426 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 9278 1335 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 9250 1450 50  0001 C CNN
+F 3 "~" H 9250 1450 50  0001 C CNN
+	1    9250 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 7700 1650 0    50   Output ~ 0
+KNX-
+Text GLabel 7700 1350 0    50   Output ~ 0
+KNX+
+NoConn ~ 12150 2850
+Text GLabel 9050 1450 0    50   Output ~ 0
+RXD
+Text GLabel 6250 3500 2    50   Output ~ 0
+RXD
+Wire Wire Line
+	5050 5050 5050 5450
+$Comp
+L Connector:Conn_01x06_Female J1
+U 1 1 60823884
+P 7900 1450
+F 0 "J1" H 7928 1426 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 7928 1335 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7900 1450 50  0001 C CNN
+F 3 "~" H 7900 1450 50  0001 C CNN
+	1    7900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 6081846A
+P 9050 1250
+F 0 "#PWR0102" H 9050 1100 50  0001 C CNN
+F 1 "VCC" H 9067 1423 50  0000 C CNN
+F 2 "" H 9050 1250 50  0001 C CNN
+F 3 "" H 9050 1250 50  0001 C CNN
+	1    9050 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 60818DF1
+P 9050 1350
+F 0 "#PWR0103" H 9050 1200 50  0001 C CNN
+F 1 "VCC" H 9067 1523 50  0000 C CNN
+F 2 "" H 9050 1350 50  0001 C CNN
+F 3 "" H 9050 1350 50  0001 C CNN
+	1    9050 1350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9050 1750 0    50   Output ~ 0
+KNX-
+Text GLabel 9050 1650 0    50   Output ~ 0
+KNX-
+Text GLabel 9050 1550 0    50   Input ~ 0
+TXD
+$EndSCHEMATC
