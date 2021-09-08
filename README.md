@@ -4,6 +4,8 @@
 
 Small KNX bus coupling module to connect microcontrollers like Arduino over the serial interface. Uses the first version of the Siemens TP-UART chip and is easy to handle by hand. Perfectly suited for small KNX self-made devices.
 
+**Dimensions:** 19 x 34 mm
+
 *This is just a DIY board, so there is no official KNX stack to configure via the ETS software.*
 
 ## Preview
