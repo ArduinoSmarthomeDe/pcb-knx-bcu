@@ -12,6 +12,8 @@ A little look at the finished circuit board (3D model):
 
 ![](https://github.com/ArduinoSmarthomeDe/pcb-knx-bcu/blob/main/preview.jpg)
 
+![](https://github.com/ArduinoSmarthomeDe/pcb-knx-bcu/blob/main/preview-back.jpg)
+
 ## Parts
 
 Some parts are a hard to come by, so here is a short overview of known distributors (no affiliates).
